@@ -92,9 +92,6 @@ export default function AdminPanelHeader({ isWebsiteOwner = false, isMerchant = 
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item onClick={() => handleChangeLanguage("en")}>English</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item onClick={() => handleChangeLanguage("tr")}>Turkish</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item onClick={() => handleChangeLanguage("de")}>German</NavDropdown.Item>
                                 </NavDropdown>
                             </>}
                             <NavDropdown title="Coupons" id="categories-nav-dropdown">
@@ -108,13 +105,6 @@ export default function AdminPanelHeader({ isWebsiteOwner = false, isMerchant = 
                                 <Nav.Link href="/users-managment" as={Link}>Users</Nav.Link> 
                                 <NavDropdown title="Stores" id="stores-nav-dropdown">
                                     <NavDropdown.Item href="/stores-managment" as={Link}>All Stores</NavDropdown.Item>
-                                </NavDropdown>
-                                <NavDropdown title="Global" id="global-nav-dropdown">
-                                    <NavDropdown.Item href="/global-managment/show-and-hide-sections-managment" as={Link}>Show / Hide Sections</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="/global-managment/change-bussiness-email-password" as={Link}>
-                                        Change Bussiness Email Password
-                                    </NavDropdown.Item>
                                 </NavDropdown>
                             </>}
                             {isMerchant && <NavDropdown title="Admins" id="admins-nav-dropdown">
@@ -140,20 +130,6 @@ export default function AdminPanelHeader({ isWebsiteOwner = false, isMerchant = 
                             </NavDropdown>
                             <NavDropdown title="Orders" id="orders-nav-dropdown">
                                 <NavDropdown.Item href="/orders-managment" as={Link}>All Orders</NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Brands" id="brands-nav-dropdown">
-                                <NavDropdown.Item href="/brands-managment/add-new-brand" as={Link}>Add New</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="/brands-managment/update-and-delete-brands" as={Link}>
-                                    Update / Delete
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Ads" id="ads-nav-dropdown">
-                                <NavDropdown.Item href="/ads-managment/add-new-ad" as={Link}>Add New</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="/ads-managment/update-and-delete-ads" as={Link}>
-                                    Update / Delete
-                                </NavDropdown.Item>
                             </NavDropdown>
                             <button className="btn btn-danger logout-btn" onClick={adminLogout}>
                                 <MdOutlineLogout className="me-2" />
